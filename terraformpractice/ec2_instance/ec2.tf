@@ -19,5 +19,9 @@ resource "aws_security_group" "allow_sg_ssh" {
         cidr_blocks      = ["0.0.0.0/0"]
         ipv6_cidr_blocks = ["::/0"]
    }
+   
+   tags = {
+    name = "allow_sg_22"
 
+   }
 }
