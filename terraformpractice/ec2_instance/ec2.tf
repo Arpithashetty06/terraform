@@ -6,6 +6,5 @@ resource "aws_instance" "terraform" {
 
   tags = {
     name = "terraform_instace"
-    
    }
 }
