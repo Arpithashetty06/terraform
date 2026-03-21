@@ -7,5 +7,23 @@ variable "ami_id" {
 variable "instance_type" {
     type = string
     default = "t3.micro"
+}
+
+variable "tags" {
+    default = {
+        Name = "backend"
+        Project = "expense"
+        Component = "backend"
+        Environment = "Dev"
+        terraform = "true"
+    } 
+}
+
+variable "sg_name" { 
+     default = "allow_ssh_sg"
+}
+  
+variable "sg_description" {
+    default = "Allow SSH access"
   
 }
