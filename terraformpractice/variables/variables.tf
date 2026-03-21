@@ -37,7 +37,7 @@ variable "to_port" {
     type = number
 }
 
-variable "protocol" {}
+variable "protocol" {
     default = "tcp"
-    type = 
+    type = string
 }
