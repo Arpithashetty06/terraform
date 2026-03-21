@@ -25,5 +25,19 @@ variable "sg_name" {
   
 variable "sg_description" {
     default = "Allow SSH access"
-  
+}
+
+variable "from_port" {
+    default = "22"
+    type = number
+}
+
+variable "to_port" {
+    default = "22"
+    type = number
+}
+
+variable "protocol" {}
+    default = "tcp"
+    type = 
 }
