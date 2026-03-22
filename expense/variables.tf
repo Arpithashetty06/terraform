@@ -11,3 +11,11 @@ variable "common_tags" {
         Terraform = "true"
     }
 }
+
+variable "zone_id" {
+    default = "Z09912121MS725XSKH1TG"
+}
+
+variable "domain_name" {
+    default = "daws81s.online"
+}
