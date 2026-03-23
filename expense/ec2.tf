@@ -1,17 +1,12 @@
-resource "aws_instance" "expense" {
+resource "aws_instance" "expenseproject" {
     count = length(var.instance_names)
-    ami = "ami-02dfbd4ff395f2a1b"
-    instance_type = "t3.micro"
+    ami = "data.aws_ami.ami_info.id"
+    instance_type = var.instance_names[count.index] == "mysql" ? "t3.small" : "t3.micro" 
     vpc_security_group_ids = [aws_security_group.allow_ssh_terraform.id]
-    # tags = {
-    #     Name = var.instance_names[count.index]
-    # }
-    tags = merge(
-        var.common_tags,
-        {
-            Name = var.instance_names[count.index]
-        }
-    )
+    tags = {
+        Name = var.instance_names[count.index]
+     }
+    
 }
 
 
