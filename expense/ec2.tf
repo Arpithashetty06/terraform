@@ -1,4 +1,4 @@
-resource "aws_instance" "expenseproject" {
+resource "aws_instance" "expense" {
     count = length(var.instance_names)
     ami = "data.aws_ami.ami_info.id"
     instance_type = var.instance_names[count.index] == "mysql" ? "t3.small" : "t3.micro" 
