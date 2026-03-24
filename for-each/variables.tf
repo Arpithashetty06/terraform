@@ -6,3 +6,11 @@ variable "instances" {
     frontend = "t3.micro"
   }
 }
+
+variable "zone_id" {
+  default = "Z07665621QB3S06Q2RHQ4"
+}
+
+variable "domain_name" {
+  default = "5starshetty.com"
+}

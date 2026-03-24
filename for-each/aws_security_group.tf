@@ -1,5 +1,5 @@
 resource "aws_security_group" "allow_ssh_terraform" {
-  name        = "allow_ssh_sg"
+  name        = "allow_ssh"
   description = "Allow SSH access" #port number 22
 
   # usually we allow everything in egress
