@@ -10,7 +10,7 @@ terraform {
     bucket         = "shetty-remote-state"
     key            = "foreach-state-demo"
     region         = "us-east-1"
-    dynamodb_table = "5starshetty-locking"
+    dynamodb_table = "starshetty-locking"
   }
 }
 
