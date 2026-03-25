@@ -1,4 +1,4 @@
-output "terraform_instances" {
-    value = aws_instance.terraform
+# output "terraform_instances" {
+#     value = aws_instance.terraform
    
-}
+# }
