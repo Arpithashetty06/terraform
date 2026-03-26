@@ -9,7 +9,7 @@ resource "aws_instance" "terraform" {
    }
 
    provisioner "local-exec" {
-      command = "echo ${self.private_ip}"
+      command = "echo ${self.private_ip} > public_ip.txt"
    }
 }
 
