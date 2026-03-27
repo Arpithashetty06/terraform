@@ -12,10 +12,10 @@ variable "common_tags" {
   }
 }
 
-variable "zone_id" {
-  default = "Z01697291CA4WUNGQJD8J"
-}
+# variable "zone_id" {
+#   default = "Z01697291CA4WUNGQJD8J"
+# }
 
-variable "domain_name" {
-  default = "5starshetty.com"
-}
+# variable "domain_name" {
+#   default = "5starshetty.com"
+# }
