@@ -1,18 +1,17 @@
-resource "aws_instance" "terraform" {
+resource "aws_instance" "terraform_p" {
   count = 3
   ami = "ami-02dfbd4ff395f2a1b"
   instance_type = "t3.micro"
   vpc_security_group_ids = [aws_security_group.allow_sg_ssh.id]
 
   tags = {
-    Name = "terraform"
+    Name = "terraform_p"
    }
 
    provisioner "local-exec" {
       command = "echo ${self.private_ip} > public_ip.txt"
    }
 }
-
 
 resource "aws_security_group" "allow_sg_ssh" {
     description = "allowing port number 22 ssh"
